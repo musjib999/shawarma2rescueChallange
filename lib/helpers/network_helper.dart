@@ -6,7 +6,7 @@ class NetworkHelper {
   final String url;
   NetworkHelper({this.url});
 
-  Future getAllResearch() async {
+  Future getAllAlbums() async {
     try {
       http.Response response = await http.get(url);
       String data = response.body;
@@ -18,7 +18,7 @@ class NetworkHelper {
   }
 
   //get one contact
-  Future getSingleResearch(String id) async {
+  Future getSingleAbum(String id) async {
     try {
       http.Response response = await http.get('$url/$id');
       var data = response.body;

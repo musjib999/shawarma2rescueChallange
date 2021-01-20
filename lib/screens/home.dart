@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
       body: FutureBuilder(
         future: NetworkHelper(
                 url: 'https://jsonplaceholder.typicode.com/users/1/photos')
-            .getAllResearch(),
+            .getAllAlbums(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return Center(
