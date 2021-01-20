@@ -8,7 +8,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  bool isSaved = false;
   List<dynamic> favArray = [];
   @override
   Widget build(BuildContext context) {
@@ -53,6 +52,7 @@ class _HomeState extends State<Home> {
             itemCount: snapshot.data.length,
             itemBuilder: (BuildContext context, int index) {
               var item = snapshot.data[index];
+              bool isSaved = favArray.contains(item);
               return Container(
                 margin: EdgeInsets.all(15),
                 decoration: BoxDecoration(
